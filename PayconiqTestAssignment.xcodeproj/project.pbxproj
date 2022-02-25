@@ -16,6 +16,12 @@
 		35F0C08B27C9093000D2D808 /* PayconiqTestAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C08A27C9093000D2D808 /* PayconiqTestAssignmentTests.swift */; };
 		35F0C09527C9093000D2D808 /* PayconiqTestAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C09427C9093000D2D808 /* PayconiqTestAssignmentUITests.swift */; };
 		35F0C09727C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C09627C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift */; };
+		35F0C0A627C90B8C00D2D808 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C0A527C90B8C00D2D808 /* MainScreenViewController.swift */; };
+		35F0C0A827C90BA100D2D808 /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C0A727C90BA100D2D808 /* MainScreenInteractor.swift */; };
+		35F0C0AA27C90BB000D2D808 /* MainScreenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C0A927C90BB000D2D808 /* MainScreenInterface.swift */; };
+		35F0C0AC27C90BBD00D2D808 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C0AB27C90BBD00D2D808 /* MainScreenPresenter.swift */; };
+		35F0C0AE27C90BD200D2D808 /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C0AD27C90BD200D2D808 /* MainScreenRouter.swift */; };
+		35F0C0B027C90BED00D2D808 /* MainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C0AF27C90BED00D2D808 /* MainScreenConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		35F0C09027C9093000D2D808 /* PayconiqTestAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayconiqTestAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0C09427C9093000D2D808 /* PayconiqTestAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayconiqTestAssignmentUITests.swift; sourceTree = "<group>"; };
 		35F0C09627C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayconiqTestAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35F0C0A527C90B8C00D2D808 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		35F0C0A727C90BA100D2D808 /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
+		35F0C0A927C90BB000D2D808 /* MainScreenInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInterface.swift; sourceTree = "<group>"; };
+		35F0C0AB27C90BBD00D2D808 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		35F0C0AD27C90BD200D2D808 /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		35F0C0AF27C90BED00D2D808 /* MainScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,8 @@
 		35F0C06727C9092F00D2D808 = {
 			isa = PBXGroup;
 			children = (
+				35F0C0A427C90B7A00D2D808 /* Popup */,
+				35F0C0A327C90B6D00D2D808 /* Main */,
 				35F0C07227C9092F00D2D808 /* PayconiqTestAssignment */,
 				35F0C08927C9093000D2D808 /* PayconiqTestAssignmentTests */,
 				35F0C09327C9093000D2D808 /* PayconiqTestAssignmentUITests */,
@@ -125,6 +139,26 @@
 				35F0C09627C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift */,
 			);
 			path = PayconiqTestAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		35F0C0A327C90B6D00D2D808 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				35F0C0A527C90B8C00D2D808 /* MainScreenViewController.swift */,
+				35F0C0A727C90BA100D2D808 /* MainScreenInteractor.swift */,
+				35F0C0A927C90BB000D2D808 /* MainScreenInterface.swift */,
+				35F0C0AB27C90BBD00D2D808 /* MainScreenPresenter.swift */,
+				35F0C0AD27C90BD200D2D808 /* MainScreenRouter.swift */,
+				35F0C0AF27C90BED00D2D808 /* MainScreenConfigurator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		35F0C0A427C90B7A00D2D808 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F0C0A827C90BA100D2D808 /* MainScreenInteractor.swift in Sources */,
 				35F0C07827C9092F00D2D808 /* ViewController.swift in Sources */,
+				35F0C0AC27C90BBD00D2D808 /* MainScreenPresenter.swift in Sources */,
+				35F0C0A627C90B8C00D2D808 /* MainScreenViewController.swift in Sources */,
 				35F0C07427C9092F00D2D808 /* AppDelegate.swift in Sources */,
+				35F0C0AA27C90BB000D2D808 /* MainScreenInterface.swift in Sources */,
+				35F0C0B027C90BED00D2D808 /* MainScreenConfigurator.swift in Sources */,
 				35F0C07627C9092F00D2D808 /* SceneDelegate.swift in Sources */,
+				35F0C0AE27C90BD200D2D808 /* MainScreenRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +484,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,7 +496,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -471,6 +512,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
