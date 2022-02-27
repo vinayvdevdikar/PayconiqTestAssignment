@@ -1,9 +1,9 @@
-//
-//  MainScreenInteractor.swift
-//  PayconiqTestAssignment
-//
-//  Created by Vinay Devdikar on 25/02/22.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+Created by Vinay Devdikar on 25/02/22.
+*/
 
 import Foundation
 class MainScreenInteractorImpl: MainScreenInteractor {
@@ -14,7 +14,17 @@ class MainScreenInteractorImpl: MainScreenInteractor {
     }
     
     func formatText(with unformatted: String) {
-        print("This is unformatted text \(unformatted)")
-        presenter.showContentOnScreen(with: "abc-efg-hij")
+        let characters = Array(unformatted.replacingOccurrences(of: "-", with: ""))
+        var formatedString = ""
+        var index = 1
+        characters.forEach { character in
+            formatedString.append(character)
+            if index % 3 == 0 && index < characters.count{
+                formatedString.append("-")
+            }
+            
+            index += 1
+        }
+        presenter.showContentOnScreen(with: formatedString)
     }
 }

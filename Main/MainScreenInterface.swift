@@ -1,9 +1,9 @@
-//
-//  MainScreenInterface.swift
-//  PayconiqTestAssignment
-//
-//  Created by Vinay Devdikar on 25/02/22.
-//
+/*
+See LICENSE folder for this sample’s licensing information.
+
+Abstract:
+Created by Vinay Devdikar on 25/02/22.
+*/
 
 import UIKit
 protocol MainScreenConfigurator {
