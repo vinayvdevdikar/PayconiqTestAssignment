@@ -13,7 +13,12 @@ class PopupScreenPresenterImpl: PopupScreenPresenter {
         self.viewController = viewController
     }
     
-    func updatePopupContraint(with margin: CGFloat) {
-        
+    func presentView(with margin: CGFloat, and type: PercentageType) {
+        switch type {
+        case .height:
+            viewController.changeTopBottomConstraintConstant(with: margin)
+        case .width:
+            viewController.changeLeftRightConstraintConstant(with: margin)
+        }
     }
 }

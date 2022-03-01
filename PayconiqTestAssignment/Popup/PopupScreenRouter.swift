@@ -8,6 +8,6 @@
 import UIKit
 class PopupScreenRouterImpl: PopupScreenRouter {
     func navigateToMainScreen(viewController: UIViewController) {
-        
+        viewController.navigationController?.popViewController(animated: true)
     }
 }

@@ -11,7 +11,7 @@
         <!--Main Screen View Controller Impl-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainScreenViewControllerImpl" customModule="PayconiqTestAssignmentTests" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainScreenViewControllerImpl" customModule="PayconiqTestAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,6 +37,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Show Popup"/>
+                                <connections>
+                                    <action selector="showPopupScreen" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lly-vU-Snp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,6 +61,7 @@
                     <connections>
                         <outlet property="codeTextField" destination="DiS-UL-GoF" id="HHk-Bg-ZAG"/>
                         <outlet property="showPopupButton" destination="nJv-5M-wlT" id="26D-dE-dMu"/>
+                        <segue destination="dtM-rY-GL1" kind="show" identifier="navigateToPopupView" id="cjw-Ss-crp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,6 +85,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ll-ch-tJc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-106" y="96"/>
+        </scene>
+        <!--Popup Screen View Controller Impl-->
+        <scene sceneID="8ED-bB-7Fu">
+            <objects>
+                <viewController id="dtM-rY-GL1" customClass="PopupScreenViewControllerImpl" customModule="PayconiqTestAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ekU-hX-8T1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3IA-k0-0GW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7w6-Kq-5KI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8RW-b5-Mc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1999" y="97"/>
         </scene>
     </scenes>
     <resources>

@@ -15,13 +15,19 @@ protocol PopupScreenRouter {
 }
 
 protocol PopupScreenInteractor {
-    func updateMaragin(with width: CGFloat, percentage: CGFloat)
+    func calculateMarginPercentage(with heightOrWidth: CGFloat, percentage: CGFloat, type: PercentageType)
 }
 
 protocol PopupScreenPresenter {
-    func updatePopupContraint(with margin: CGFloat)
+    func presentView(with margin: CGFloat, and type: PercentageType)
 }
 
 protocol PopupScreenViewController {
-    func updateConstraint(with margin: CGFloat)
+    func changeLeftRightConstraintConstant(with margin: CGFloat)
+    func changeTopBottomConstraintConstant(with margin: CGFloat)
+}
+
+enum PercentageType {
+    case height
+    case width
 }

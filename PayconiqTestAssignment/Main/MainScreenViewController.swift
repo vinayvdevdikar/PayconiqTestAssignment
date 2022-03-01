@@ -17,6 +17,7 @@ class MainScreenViewControllerImpl: UIViewController, MainScreenViewController {
         super.viewDidLoad()
         configurator.configure(viewController: self)
         showPopupButton.isEnabled = false
+        self.title = "Main"
     }
     
     func updateTextField(with formatted: String) {

@@ -12,8 +12,13 @@ class PopupScreenInteractorImpl: PopupScreenInteractor {
     init(presenter: PopupScreenPresenter) {
         self.presenter = presenter
     }
-    
-    func updateMaragin(with width: CGFloat, percentage: CGFloat) {
-        
+
+    func calculateMarginPercentage(with heightOrWidth: CGFloat,
+                                   percentage: CGFloat,
+                                   type: PercentageType) {
+        //converting percentage into decimal
+        let prcentageIndecimal = percentage / 100.0
+        let margin = prcentageIndecimal * heightOrWidth
+        presenter.presentView(with: margin, and: type)
     }
 }

@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		351AE6B227CB7ACF00A57261 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B127CB7ACF00A57261 /* BaseTest.swift */; };
-		351AE6BB27CBA70300A57261 /* MainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B527CBA70300A57261 /* MainScreenConfigurator.swift */; };
-		351AE6BC27CBA70300A57261 /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B627CBA70300A57261 /* MainScreenInteractor.swift */; };
-		351AE6BD27CBA70300A57261 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B727CBA70300A57261 /* MainScreenPresenter.swift */; };
-		351AE6BE27CBA70300A57261 /* MainScreenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B827CBA70300A57261 /* MainScreenInterface.swift */; };
-		351AE6BF27CBA70300A57261 /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B927CBA70300A57261 /* MainScreenRouter.swift */; };
-		351AE6C027CBA70300A57261 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6BA27CBA70300A57261 /* MainScreenViewController.swift */; };
-		351AE6C227CBA72800A57261 /* PopupScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C127CBA72800A57261 /* PopupScreenConfigurator.swift */; };
-		351AE6C427CBA74700A57261 /* PopupScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C327CBA74700A57261 /* PopupScreenInteractor.swift */; };
-		351AE6C627CBA75C00A57261 /* PopupScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C527CBA75C00A57261 /* PopupScreenPresenter.swift */; };
-		351AE6C827CBA76E00A57261 /* PopupScreenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C727CBA76E00A57261 /* PopupScreenInterface.swift */; };
-		351AE6CA27CBA77E00A57261 /* PopupScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C927CBA77E00A57261 /* PopupScreenRouter.swift */; };
-		351AE6CC27CBA7A300A57261 /* PopupScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6CB27CBA7A300A57261 /* PopupScreenViewController.swift */; };
+		35276F7D27CDF508006F2FFF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6BA27CBA70300A57261 /* MainScreenViewController.swift */; };
+		35276F7E27CDF50D006F2FFF /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B927CBA70300A57261 /* MainScreenRouter.swift */; };
+		35276F8127CDF518006F2FFF /* MainScreenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B827CBA70300A57261 /* MainScreenInterface.swift */; };
+		35276F8227CDF51C006F2FFF /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B727CBA70300A57261 /* MainScreenPresenter.swift */; };
+		35276F8327CDF520006F2FFF /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B627CBA70300A57261 /* MainScreenInteractor.swift */; };
+		35276F8427CDF525006F2FFF /* MainScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B527CBA70300A57261 /* MainScreenConfigurator.swift */; };
+		35276F8527CDF542006F2FFF /* PopupScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C127CBA72800A57261 /* PopupScreenConfigurator.swift */; };
+		35276F8627CDF542006F2FFF /* PopupScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6CB27CBA7A300A57261 /* PopupScreenViewController.swift */; };
+		35276F8727CDF542006F2FFF /* PopupScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C327CBA74700A57261 /* PopupScreenInteractor.swift */; };
+		35276F8827CDF542006F2FFF /* PopupScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C527CBA75C00A57261 /* PopupScreenPresenter.swift */; };
+		35276F8927CDF542006F2FFF /* PopupScreenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C727CBA76E00A57261 /* PopupScreenInterface.swift */; };
+		35276F8A27CDF542006F2FFF /* PopupScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6C927CBA77E00A57261 /* PopupScreenRouter.swift */; };
 		352A3E2527CA44A4005CA3F4 /* MainScreenViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A3E2427CA44A4005CA3F4 /* MainScreenViewControllerTest.swift */; };
 		352A3E2727CA44B3005CA3F4 /* MainScreenInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A3E2627CA44B3005CA3F4 /* MainScreenInteractorTest.swift */; };
 		352A3E2927CA44DD005CA3F4 /* MainScreenPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A3E2827CA44DD005CA3F4 /* MainScreenPresenterTest.swift */; };
@@ -349,7 +349,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F0C07427C9092F00D2D808 /* AppDelegate.swift in Sources */,
+				35276F8827CDF542006F2FFF /* PopupScreenPresenter.swift in Sources */,
+				35276F8327CDF520006F2FFF /* MainScreenInteractor.swift in Sources */,
+				35276F8A27CDF542006F2FFF /* PopupScreenRouter.swift in Sources */,
 				35F0C07627C9092F00D2D808 /* SceneDelegate.swift in Sources */,
+				35276F8627CDF542006F2FFF /* PopupScreenViewController.swift in Sources */,
+				35276F8127CDF518006F2FFF /* MainScreenInterface.swift in Sources */,
+				35276F7D27CDF508006F2FFF /* MainScreenViewController.swift in Sources */,
+				35276F8727CDF542006F2FFF /* PopupScreenInteractor.swift in Sources */,
+				35276F8927CDF542006F2FFF /* PopupScreenInterface.swift in Sources */,
+				35276F7E27CDF50D006F2FFF /* MainScreenRouter.swift in Sources */,
+				35276F8227CDF51C006F2FFF /* MainScreenPresenter.swift in Sources */,
+				35276F8427CDF525006F2FFF /* MainScreenConfigurator.swift in Sources */,
+				35276F8527CDF542006F2FFF /* PopupScreenConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,23 +370,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F0C08B27C9093000D2D808 /* PayconiqTestAssignmentTests.swift in Sources */,
-				351AE6CA27CBA77E00A57261 /* PopupScreenRouter.swift in Sources */,
 				352A3E2927CA44DD005CA3F4 /* MainScreenPresenterTest.swift in Sources */,
-				351AE6BE27CBA70300A57261 /* MainScreenInterface.swift in Sources */,
-				351AE6BD27CBA70300A57261 /* MainScreenPresenter.swift in Sources */,
 				352A3E2B27CA44EB005CA3F4 /* MainScreenRouterTest.swift in Sources */,
-				351AE6C027CBA70300A57261 /* MainScreenViewController.swift in Sources */,
 				352A3E2727CA44B3005CA3F4 /* MainScreenInteractorTest.swift in Sources */,
-				351AE6C627CBA75C00A57261 /* PopupScreenPresenter.swift in Sources */,
 				351AE6B227CB7ACF00A57261 /* BaseTest.swift in Sources */,
-				351AE6BF27CBA70300A57261 /* MainScreenRouter.swift in Sources */,
-				351AE6C827CBA76E00A57261 /* PopupScreenInterface.swift in Sources */,
-				351AE6BC27CBA70300A57261 /* MainScreenInteractor.swift in Sources */,
-				351AE6BB27CBA70300A57261 /* MainScreenConfigurator.swift in Sources */,
-				351AE6C227CBA72800A57261 /* PopupScreenConfigurator.swift in Sources */,
-				351AE6CC27CBA7A300A57261 /* PopupScreenViewController.swift in Sources */,
 				352A3E2527CA44A4005CA3F4 /* MainScreenViewControllerTest.swift in Sources */,
-				351AE6C427CBA74700A57261 /* PopupScreenInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
