@@ -24,6 +24,8 @@
 		352A3E2727CA44B3005CA3F4 /* MainScreenInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A3E2627CA44B3005CA3F4 /* MainScreenInteractorTest.swift */; };
 		352A3E2927CA44DD005CA3F4 /* MainScreenPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A3E2827CA44DD005CA3F4 /* MainScreenPresenterTest.swift */; };
 		352A3E2B27CA44EB005CA3F4 /* MainScreenRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A3E2A27CA44EB005CA3F4 /* MainScreenRouterTest.swift */; };
+		3532B90627CF287A00755886 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B90527CF287A00755886 /* UIButton+Extension.swift */; };
+		3532B90827CF729C00755886 /* asdasdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B90727CF729C00755886 /* asdasdViewController.swift */; };
 		35F0C07427C9092F00D2D808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C07327C9092F00D2D808 /* AppDelegate.swift */; };
 		35F0C07627C9092F00D2D808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C07527C9092F00D2D808 /* SceneDelegate.swift */; };
 		35F0C07B27C9092F00D2D808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F0C07927C9092F00D2D808 /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 		352A3E2627CA44B3005CA3F4 /* MainScreenInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractorTest.swift; sourceTree = "<group>"; };
 		352A3E2827CA44DD005CA3F4 /* MainScreenPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenterTest.swift; sourceTree = "<group>"; };
 		352A3E2A27CA44EB005CA3F4 /* MainScreenRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouterTest.swift; sourceTree = "<group>"; };
+		3532B90527CF287A00755886 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		3532B90727CF729C00755886 /* asdasdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asdasdViewController.swift; sourceTree = "<group>"; };
 		35F0C07027C9092F00D2D808 /* PayconiqTestAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayconiqTestAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0C07327C9092F00D2D808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F0C07527C9092F00D2D808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,9 +166,20 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		3532B90427CF286600755886 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3532B90527CF287A00755886 /* UIButton+Extension.swift */,
+			);
+			name = Extensions;
+			path = PayconiqTestAssignment/Extensions;
+			sourceTree = "<group>";
+		};
 		35F0C06727C9092F00D2D808 = {
 			isa = PBXGroup;
 			children = (
+				3532B90727CF729C00755886 /* asdasdViewController.swift */,
+				3532B90427CF286600755886 /* Extensions */,
 				351AE6B427CBA70300A57261 /* Main */,
 				351AE6B327CBA70300A57261 /* Popup */,
 				35F0C07227C9092F00D2D808 /* PayconiqTestAssignment */,
@@ -352,10 +367,12 @@
 				35276F8827CDF542006F2FFF /* PopupScreenPresenter.swift in Sources */,
 				35276F8327CDF520006F2FFF /* MainScreenInteractor.swift in Sources */,
 				35276F8A27CDF542006F2FFF /* PopupScreenRouter.swift in Sources */,
+				3532B90827CF729C00755886 /* asdasdViewController.swift in Sources */,
 				35F0C07627C9092F00D2D808 /* SceneDelegate.swift in Sources */,
 				35276F8627CDF542006F2FFF /* PopupScreenViewController.swift in Sources */,
 				35276F8127CDF518006F2FFF /* MainScreenInterface.swift in Sources */,
 				35276F7D27CDF508006F2FFF /* MainScreenViewController.swift in Sources */,
+				3532B90627CF287A00755886 /* UIButton+Extension.swift in Sources */,
 				35276F8727CDF542006F2FFF /* PopupScreenInteractor.swift in Sources */,
 				35276F8927CDF542006F2FFF /* PopupScreenInterface.swift in Sources */,
 				35276F7E27CDF50D006F2FFF /* MainScreenRouter.swift in Sources */,
@@ -553,6 +570,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,6 +599,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

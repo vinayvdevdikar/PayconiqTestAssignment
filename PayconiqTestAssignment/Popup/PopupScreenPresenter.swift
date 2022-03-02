@@ -21,4 +21,8 @@ class PopupScreenPresenterImpl: PopupScreenPresenter {
             viewController.changeLeftRightConstraintConstant(with: margin)
         }
     }
+    
+    func presentReshuffelCode(with reShuffelCode: String) {
+        viewController.changeTheTextOfLabel(with: reShuffelCode)
+    }
 }

@@ -31,6 +31,13 @@ class MainScreenViewControllerImpl: UIViewController, MainScreenViewController {
     override open var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         return .all
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let popupViewController = segue.destination as? PopupScreenViewControllerImpl {
+            popupViewController.selectedCode = codeTextField.text ?? ""
+        }
+    }
+    
 }
 
 extension MainScreenViewControllerImpl: UITextFieldDelegate {
@@ -50,4 +57,18 @@ extension MainScreenViewControllerImpl: UITextFieldDelegate {
     }
 }
 
+extension MainScreenRouterImpl {
+    
+    
+    // This function is called before the segue
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        // Get a reference to the second view controller
+//        let secondViewController = segue.destination as! SecondViewController
+//
+//        // Set a variable in the second view controller with the String to pass
+//        secondViewController.receivedString = textField.text!
+//    }
+    
+}
 

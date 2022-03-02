@@ -21,4 +21,19 @@ class PopupScreenInteractorImpl: PopupScreenInteractor {
         let margin = prcentageIndecimal * heightOrWidth
         presenter.presentView(with: margin, and: type)
     }
+    
+    func shuffelTheExistingCharater(with code: String) {
+        let shuffeledString =  String(code.shuffled())
+        let characters = Array(shuffeledString)
+        var formatedString = ""
+        var index = 1
+        characters.forEach { character in
+            formatedString.append(character)
+            if index % 3 == 0 && index < characters.count{
+                formatedString.append("-")
+            }
+            index += 1
+        }
+        presenter.presentReshuffelCode(with: formatedString)
+    }
 }
