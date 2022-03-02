@@ -27,4 +27,23 @@ class MainScreenInteractorImpl: MainScreenInteractor {
         }
         presenter.showContentOnScreen(with: formatedString)
     }
+    
+    /// `retriveLastSaveKey` pull last save key from keychain.
+    func retrieveLastSaveKey() {
+        let query = [
+            kSecAttrService: Keychain.service,
+            kSecAttrAccount: Keychain.account,
+            kSecClass: kSecClassGenericPassword,
+            kSecReturnData: true
+        ] as CFDictionary
+        
+        var result: AnyObject?
+        SecItemCopyMatching(query, &result)
+        if let stringData = result as? Data,
+           let savedString = String(data: stringData, encoding: .utf8) {
+            presenter.presentSaveString(with: savedString)
+        } else {
+            presenter.presentSaveString(with: "")
+        }
+    }
 }

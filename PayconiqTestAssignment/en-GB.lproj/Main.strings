@@ -1,0 +1,14 @@
+
+/* Class = "UILabel"; text = "Please Enter Code:"; ObjectID = "VRP-hB-CjT"; */
+"VRP-hB-CjT.text" = "Please Enter Code:";
+
+/* Class = "UIButton"; configuration.title = "Show Popup"; ObjectID = "nJv-5M-wlT"; */
+"mainscreen_showpopup_button" = "Show Popup";
+"mainscreen_title" = "Main";
+
+
+// Poup screen
+"popupscreen_longtext" = "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. This long text contains the your code";
+"popupscreen_shuffel_button" = "Shuffel";
+"popupscreen_close_button" = "Close";
+"popupscreen_title" = "Popup"

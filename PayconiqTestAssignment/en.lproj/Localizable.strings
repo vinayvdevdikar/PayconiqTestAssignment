@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  PayconiqTestAssignment
+
+  Created by Vinay Devdikar on 02/03/22.
+  
+*/
+"mainscreen_showpopup_button" = "Show Popup";
+"mainscreen_title" = "Main";
+
+
+// Poup screen
+"popupscreen_longtext" = "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. This long text contains the your code";
+"popupscreen_shuffel_button" = "Shuffel";
+"popupscreen_close_button" = "Close";
+"popupscreen_title" = "Popup";

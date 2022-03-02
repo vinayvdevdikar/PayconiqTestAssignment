@@ -16,10 +16,12 @@ protocol MainScreenRouter {
 
 protocol MainScreenInteractor {
     func formatText(with unformatted: String)
+    func retrieveLastSaveKey()
 }
 
 protocol MainScreenPresenter {
     func showContentOnScreen(with formatted: String)
+    func presentSaveString(with saved: String)
 }
 
 protocol MainScreenViewController {

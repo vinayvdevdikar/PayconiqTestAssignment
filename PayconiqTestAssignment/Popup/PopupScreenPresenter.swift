@@ -25,4 +25,8 @@ class PopupScreenPresenterImpl: PopupScreenPresenter {
     func presentReshuffelCode(with reShuffelCode: String) {
         viewController.changeTheTextOfLabel(with: reShuffelCode)
     }
+    
+    func presentSavedStatus(with status: Bool) {
+        viewController.showSaveStatusOnScreen(with: status)
+    }
 }

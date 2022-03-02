@@ -1,13 +1,13 @@
 //
-//  BaseTest.swift
+//  PopupScreenPresenterTest.swift
 //  PayconiqTestAssignmentTests
 //
-//  Created by Vinay Devdikar on 27/02/22.
+//  Created by Vinay Devdikar on 02/03/22.
 //
 
 import XCTest
 
-class BaseTest: XCTestCase {
+class PopupScreenPresenterTest: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

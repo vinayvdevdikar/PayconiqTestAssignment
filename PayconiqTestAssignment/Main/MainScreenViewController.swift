@@ -16,8 +16,8 @@ class MainScreenViewControllerImpl: UIViewController, MainScreenViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(viewController: self)
-        showPopupButton.isEnabled = false
-        self.title = "Main"
+        applyViewModel()
+        interactor.retrieveLastSaveKey()
     }
     
     func updateTextField(with formatted: String) {
@@ -32,12 +32,18 @@ class MainScreenViewControllerImpl: UIViewController, MainScreenViewController {
         return .all
     }
     
+    /// `prepare` this method is used to share app code to next view controller.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let popupViewController = segue.destination as? PopupScreenViewControllerImpl {
             popupViewController.selectedCode = codeTextField.text ?? ""
         }
     }
     
+    /// `applyViewModel` Set all text
+    func applyViewModel() {
+        title = NSLocalizedString("mainscreen_title", comment: "")
+        showPopupButton.setTitle(NSLocalizedString("mainscreen_showpopup_button", comment: ""), for: .normal)
+    }
 }
 
 extension MainScreenViewControllerImpl: UITextFieldDelegate {
@@ -50,25 +56,5 @@ extension MainScreenViewControllerImpl: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        showPopupButton.isEnabled = textField.text?.count ?? 0 > 3 ? true : false
-        return true
-    }
-}
-
-extension MainScreenRouterImpl {
-    
-    
-    // This function is called before the segue
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        // Get a reference to the second view controller
-//        let secondViewController = segue.destination as! SecondViewController
-//
-//        // Set a variable in the second view controller with the String to pass
-//        secondViewController.receivedString = textField.text!
-//    }
-    
 }
 

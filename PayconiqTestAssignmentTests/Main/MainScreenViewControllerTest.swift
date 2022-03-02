@@ -51,14 +51,7 @@ class MainScreenViewControllerTest: XCTestCase {
         XCTAssertTrue(mainScreenViewController.textFieldShouldReturn(dummyTextField))
         XCTAssertFalse(dummyTextField.isFirstResponder)
     }
-    
-    func test_shouldChangeCharactersIn() {
-        dummyTextField.text = "dummytext"
-        let status = mainScreenViewController.textField(dummyTextField, shouldChangeCharactersIn: NSRange(), replacementString: "")
-        XCTAssertTrue(status)
-        XCTAssertTrue(dummyButton.isEnabled)
-    }
-    
+
 }
 
 class MockRouter: MainScreenRouter {
@@ -77,6 +70,10 @@ class MockInteractor: MainScreenInteractor {
     var isMethodCalled = false
     
     func formatText(with unformatted: String) {
+        isMethodCalled = true
+    }
+    
+    func retrieveLastSaveKey() {
         isMethodCalled = true
     }
     

@@ -28,4 +28,14 @@ class MainScreenInteractorTest: XCTestCase {
         interactor.formatText(with: "aaabccde")
         XCTAssertEqual(mainScreenViewController.codeTextField.text, "aaa-bcc-de")
     }
+    
+    func test_retrieveLastSaveKey() {
+        interactor.retrieveLastSaveKey()
+        do {
+            let status = try XCTUnwrap(mainScreenViewController.codeTextField.text?.isEmpty)
+            XCTAssertFalse(status)
+        } catch {
+            XCTFail("content found nil")
+        }
+    }
 }

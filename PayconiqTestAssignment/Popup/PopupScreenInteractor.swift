@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Security
+
 class PopupScreenInteractorImpl: PopupScreenInteractor {
     let presenter: PopupScreenPresenter
     
@@ -22,6 +24,7 @@ class PopupScreenInteractorImpl: PopupScreenInteractor {
         presenter.presentView(with: margin, and: type)
     }
     
+    ///`shuffelTheExistingCharater` shuffel the charater
     func shuffelTheExistingCharater(with code: String) {
         let shuffeledString =  String(code.shuffled())
         let characters = Array(shuffeledString)
@@ -35,5 +38,29 @@ class PopupScreenInteractorImpl: PopupScreenInteractor {
             index += 1
         }
         presenter.presentReshuffelCode(with: formatedString)
+    }
+    
+    ///`storeValueInsideKeychain` store value in keychain and if already available then update it.
+    func storeValueInsideKeychain(with code: String) {
+        guard let data = code.data(using: .utf8) else {
+            return
+        }
+        let query = [
+            kSecValueData: data,
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrService: Keychain.service,
+            kSecAttrAccount: Keychain.account,
+        ] as CFDictionary
+        
+        // Add data in query to keychain
+        var status = SecItemAdd(query, nil)
+        
+        // Item already exist, thus update it.
+        if status == errSecDuplicateItem {
+            let attributesToUpdate = [kSecValueData: data] as CFDictionary
+            status = SecItemUpdate(query, attributesToUpdate)
+        }
+        
+        presenter.presentSavedStatus(with: status == errSecSuccess)
     }
 }

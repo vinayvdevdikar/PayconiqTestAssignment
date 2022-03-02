@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		351AE6B227CB7ACF00A57261 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B127CB7ACF00A57261 /* BaseTest.swift */; };
 		35276F7D27CDF508006F2FFF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6BA27CBA70300A57261 /* MainScreenViewController.swift */; };
 		35276F7E27CDF50D006F2FFF /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B927CBA70300A57261 /* MainScreenRouter.swift */; };
 		35276F8127CDF518006F2FFF /* MainScreenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B827CBA70300A57261 /* MainScreenInterface.swift */; };
@@ -25,7 +24,12 @@
 		352A3E2927CA44DD005CA3F4 /* MainScreenPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A3E2827CA44DD005CA3F4 /* MainScreenPresenterTest.swift */; };
 		352A3E2B27CA44EB005CA3F4 /* MainScreenRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352A3E2A27CA44EB005CA3F4 /* MainScreenRouterTest.swift */; };
 		3532B90627CF287A00755886 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B90527CF287A00755886 /* UIButton+Extension.swift */; };
-		3532B90827CF729C00755886 /* asdasdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B90727CF729C00755886 /* asdasdViewController.swift */; };
+		3532B90B27CFA37C00755886 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B90A27CFA37C00755886 /* Constant.swift */; };
+		3532B90D27CFA4B900755886 /* PopupScreenInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B90C27CFA4B900755886 /* PopupScreenInteractorTest.swift */; };
+		3532B90F27CFA4CF00755886 /* PopupScreenRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B90E27CFA4CF00755886 /* PopupScreenRouterTest.swift */; };
+		3532B91127CFA4DA00755886 /* PopupScreenPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B91027CFA4DA00755886 /* PopupScreenPresenterTest.swift */; };
+		3532B91327CFA50400755886 /* PopupScreenViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B91227CFA50400755886 /* PopupScreenViewControllerTest.swift */; };
+		3532B91A27CFAD4400755886 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3532B91827CFAD4400755886 /* Localizable.strings */; };
 		35F0C07427C9092F00D2D808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C07327C9092F00D2D808 /* AppDelegate.swift */; };
 		35F0C07627C9092F00D2D808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C07527C9092F00D2D808 /* SceneDelegate.swift */; };
 		35F0C07B27C9092F00D2D808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F0C07927C9092F00D2D808 /* Main.storyboard */; };
@@ -54,7 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		351AE6B127CB7ACF00A57261 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		351AE6B527CBA70300A57261 /* MainScreenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenConfigurator.swift; sourceTree = "<group>"; };
 		351AE6B627CBA70300A57261 /* MainScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
 		351AE6B727CBA70300A57261 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
@@ -72,7 +75,15 @@
 		352A3E2827CA44DD005CA3F4 /* MainScreenPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenterTest.swift; sourceTree = "<group>"; };
 		352A3E2A27CA44EB005CA3F4 /* MainScreenRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouterTest.swift; sourceTree = "<group>"; };
 		3532B90527CF287A00755886 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		3532B90727CF729C00755886 /* asdasdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asdasdViewController.swift; sourceTree = "<group>"; };
+		3532B90A27CFA37C00755886 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		3532B90C27CFA4B900755886 /* PopupScreenInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupScreenInteractorTest.swift; sourceTree = "<group>"; };
+		3532B90E27CFA4CF00755886 /* PopupScreenRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupScreenRouterTest.swift; sourceTree = "<group>"; };
+		3532B91027CFA4DA00755886 /* PopupScreenPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupScreenPresenterTest.swift; sourceTree = "<group>"; };
+		3532B91227CFA50400755886 /* PopupScreenViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupScreenViewControllerTest.swift; sourceTree = "<group>"; };
+		3532B91427CFAA9400755886 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		3532B91527CFAA9400755886 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		3532B91927CFAD4400755886 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3532B91B27CFAD8200755886 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		35F0C07027C9092F00D2D808 /* PayconiqTestAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayconiqTestAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0C07327C9092F00D2D808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F0C07527C9092F00D2D808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,14 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		351AE6B027CB7ABC00A57261 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				351AE6B127CB7ACF00A57261 /* BaseTest.swift */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		351AE6B327CBA70300A57261 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +154,10 @@
 		352A3E2227CA448D005CA3F4 /* Popup */ = {
 			isa = PBXGroup;
 			children = (
+				3532B90C27CFA4B900755886 /* PopupScreenInteractorTest.swift */,
+				3532B91027CFA4DA00755886 /* PopupScreenPresenterTest.swift */,
+				3532B90E27CFA4CF00755886 /* PopupScreenRouterTest.swift */,
+				3532B91227CFA50400755886 /* PopupScreenViewControllerTest.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -175,16 +182,25 @@
 			path = PayconiqTestAssignment/Extensions;
 			sourceTree = "<group>";
 		};
+		3532B90927CFA35300755886 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3532B90A27CFA37C00755886 /* Constant.swift */,
+			);
+			name = Utility;
+			path = PayconiqTestAssignment/Utility;
+			sourceTree = "<group>";
+		};
 		35F0C06727C9092F00D2D808 = {
 			isa = PBXGroup;
 			children = (
-				3532B90727CF729C00755886 /* asdasdViewController.swift */,
 				3532B90427CF286600755886 /* Extensions */,
 				351AE6B427CBA70300A57261 /* Main */,
 				351AE6B327CBA70300A57261 /* Popup */,
 				35F0C07227C9092F00D2D808 /* PayconiqTestAssignment */,
 				35F0C08927C9093000D2D808 /* PayconiqTestAssignmentTests */,
 				35F0C09327C9093000D2D808 /* PayconiqTestAssignmentUITests */,
+				3532B90927CFA35300755886 /* Utility */,
 				35F0C07127C9092F00D2D808 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -204,6 +220,7 @@
 			children = (
 				35F0C07327C9092F00D2D808 /* AppDelegate.swift */,
 				35F0C07527C9092F00D2D808 /* SceneDelegate.swift */,
+				3532B91827CFAD4400755886 /* Localizable.strings */,
 				35F0C07927C9092F00D2D808 /* Main.storyboard */,
 				35F0C07C27C9093000D2D808 /* Assets.xcassets */,
 				35F0C07E27C9093000D2D808 /* LaunchScreen.storyboard */,
@@ -215,7 +232,6 @@
 		35F0C08927C9093000D2D808 /* PayconiqTestAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				351AE6B027CB7ABC00A57261 /* Base */,
 				352A3E2327CA448D005CA3F4 /* Main */,
 				352A3E2227CA448D005CA3F4 /* Popup */,
 				35F0C08A27C9093000D2D808 /* PayconiqTestAssignmentTests.swift */,
@@ -318,6 +334,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-GB",
 			);
 			mainGroup = 35F0C06727C9092F00D2D808;
 			productRefGroup = 35F0C07127C9092F00D2D808 /* Products */;
@@ -337,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F0C08027C9093000D2D808 /* LaunchScreen.storyboard in Resources */,
+				3532B91A27CFAD4400755886 /* Localizable.strings in Resources */,
 				35F0C07D27C9093000D2D808 /* Assets.xcassets in Resources */,
 				35F0C07B27C9092F00D2D808 /* Main.storyboard in Resources */,
 			);
@@ -366,8 +384,8 @@
 				35F0C07427C9092F00D2D808 /* AppDelegate.swift in Sources */,
 				35276F8827CDF542006F2FFF /* PopupScreenPresenter.swift in Sources */,
 				35276F8327CDF520006F2FFF /* MainScreenInteractor.swift in Sources */,
+				3532B90B27CFA37C00755886 /* Constant.swift in Sources */,
 				35276F8A27CDF542006F2FFF /* PopupScreenRouter.swift in Sources */,
-				3532B90827CF729C00755886 /* asdasdViewController.swift in Sources */,
 				35F0C07627C9092F00D2D808 /* SceneDelegate.swift in Sources */,
 				35276F8627CDF542006F2FFF /* PopupScreenViewController.swift in Sources */,
 				35276F8127CDF518006F2FFF /* MainScreenInterface.swift in Sources */,
@@ -387,10 +405,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F0C08B27C9093000D2D808 /* PayconiqTestAssignmentTests.swift in Sources */,
+				3532B91327CFA50400755886 /* PopupScreenViewControllerTest.swift in Sources */,
 				352A3E2927CA44DD005CA3F4 /* MainScreenPresenterTest.swift in Sources */,
+				3532B90F27CFA4CF00755886 /* PopupScreenRouterTest.swift in Sources */,
 				352A3E2B27CA44EB005CA3F4 /* MainScreenRouterTest.swift in Sources */,
+				3532B90D27CFA4B900755886 /* PopupScreenInteractorTest.swift in Sources */,
+				3532B91127CFA4DA00755886 /* PopupScreenPresenterTest.swift in Sources */,
 				352A3E2727CA44B3005CA3F4 /* MainScreenInteractorTest.swift in Sources */,
-				351AE6B227CB7ACF00A57261 /* BaseTest.swift in Sources */,
 				352A3E2527CA44A4005CA3F4 /* MainScreenViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,10 +441,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3532B91827CFAD4400755886 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3532B91927CFAD4400755886 /* en-GB */,
+				3532B91B27CFAD8200755886 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		35F0C07927C9092F00D2D808 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				35F0C07A27C9092F00D2D808 /* Base */,
+				3532B91427CFAA9400755886 /* en-GB */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -432,6 +463,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				35F0C07F27C9093000D2D808 /* Base */,
+				3532B91527CFAA9400755886 /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -443,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -504,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

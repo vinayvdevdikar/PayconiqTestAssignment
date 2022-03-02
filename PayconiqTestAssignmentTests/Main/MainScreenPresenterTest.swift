@@ -28,6 +28,11 @@ class MockMainScreenPresenter: MainScreenPresenter {
     func showContentOnScreen(with formatted: String) {
         isMethodCalled = true
     }
+    
+    func presentSaveString(with saved: String) {
+        isMethodCalled = true
+    }
+    
     func resetflag() {
         isMethodCalled = false
     }

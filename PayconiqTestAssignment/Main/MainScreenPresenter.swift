@@ -16,4 +16,8 @@ class MainScreenPresenterImpl: MainScreenPresenter {
     func showContentOnScreen(with formatted: String) {
         viewController.updateTextField(with: formatted)
     }
+    
+    func presentSaveString(with saved: String) {
+        viewController.updateTextField(with: saved)
+    }
 }

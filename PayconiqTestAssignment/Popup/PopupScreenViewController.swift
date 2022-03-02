@@ -63,7 +63,7 @@ class PopupScreenViewControllerImpl: UIViewController {
         let stackView = UIStackView(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillEqually
-        stackView.spacing = baseUnit
+        stackView.spacing = Theme.Dimensions.baseUnit
         stackView.axis = .horizontal
         return stackView
     }()
@@ -72,7 +72,7 @@ class PopupScreenViewControllerImpl: UIViewController {
         let stackView = UIStackView(frame: .zero)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillProportionally
-        stackView.spacing = baseUnit
+        stackView.spacing = Theme.Dimensions.baseUnit
         stackView.axis = .vertical
         return stackView
     }()
@@ -81,12 +81,8 @@ class PopupScreenViewControllerImpl: UIViewController {
     private var bottomAnchor: NSLayoutConstraint!
     private var leadingAnchor: NSLayoutConstraint!
     private var trailingAnchor: NSLayoutConstraint!
-    
-    private let baseUnit: CGFloat = 16.0
-    private let heightPercentage: CGFloat = 10
-    private let widthPercentage: CGFloat = 20
-    private let imageHeight: CGFloat = 170
-    private let longText: String = "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. This long text contains the your code"
+        
+    // MARK: - View Life Cycle
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -100,10 +96,10 @@ class PopupScreenViewControllerImpl: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         interactor.calculateMarginPercentage(with: size.width,
-                                             percentage: widthPercentage,
+                                             percentage: Theme.Dimensions.widthPercentage,
                                              type: .width)
         interactor.calculateMarginPercentage(with: size.height,
-                                             percentage: heightPercentage,
+                                             percentage: Theme.Dimensions.heightPercentage,
                                              type: .height)
         
         if UIDevice.current.orientation.isLandscape {
@@ -121,10 +117,10 @@ class PopupScreenViewControllerImpl: UIViewController {
         addPopupView()
         addStackView()
         interactor.calculateMarginPercentage(with: view.frame.width,
-                                             percentage: widthPercentage,
+                                             percentage: Theme.Dimensions.widthPercentage,
                                              type: .width)
         interactor.calculateMarginPercentage(with: view.frame.height,
-                                             percentage: heightPercentage,
+                                             percentage: Theme.Dimensions.heightPercentage,
                                              type: .height)
     }
     
@@ -144,7 +140,7 @@ class PopupScreenViewControllerImpl: UIViewController {
         shuffelButton.titleLabel?.font = UIFont.preferredFont(forTextStyle: .caption1)
         shuffelButton.setBorder()
         
-        codeLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        codeLabel.font = UIFont.systemFont(ofSize: 14.0)
         codeLabel.textColor = .black
     
         /// this call to set imageview hidden if orientation is landscape.
@@ -155,14 +151,14 @@ class PopupScreenViewControllerImpl: UIViewController {
     
     /// `applyViewModel` is used to set the data on screen.
     private func applyViewModel() {
-        codeLabel.text = "\(longText) \"\(selectedCode) \""
-        self.title = "Popup"
-        shuffelButton.setTitle("Shuffel", for: .normal)
-        closeButton.setTitle("Close", for: .normal)
+        codeLabel.text = "\(NSLocalizedString("popupscreen_longtext", comment: "")) \"\(selectedCode) \""
+        title = NSLocalizedString("popupscreen_title", comment: "")
+        shuffelButton.setTitle(NSLocalizedString("popupscreen_shuffel_button", comment: ""), for: .normal)
+        closeButton.setTitle(NSLocalizedString("popupscreen_close_button", comment: ""), for: .normal)
     }
 }
 
-///MARK:- `PopupScreenViewController` protocol methods implementation.
+//MARK: - `PopupScreenViewController` protocol methods implementation.
 
 extension PopupScreenViewControllerImpl: PopupScreenViewController {
     
@@ -182,15 +178,21 @@ extension PopupScreenViewControllerImpl: PopupScreenViewController {
         }
     }
     
-    /// `changeTheTextOfLabel` this method is used to update the text
+    /// `changeTheTextOfLabel` this method is used to update the shuffled formatted text
     func changeTheTextOfLabel(with reShuffelCode: String) {
         DispatchQueue.main.async { [weak self] in
-            self?.codeLabel.text = "\(self?.longText ?? "") \"\(reShuffelCode) \""
+            self?.selectedCode = reShuffelCode
+            self?.codeLabel.text = "\(NSLocalizedString("popupscreen_longtext", comment: "")) \"\(reShuffelCode) \""
         }
+    }
+    
+    /// `showSaveStatusOnScreen` this displays save status on screen.
+    func showSaveStatusOnScreen(with status: Bool) {
+        //TODO:- Need to show the status of keychain
     }
 }
 
-//MARK: - Method under these extensions are used to handle all actions.
+//MARK: - Method in this extension are used to handle all actions.
 
 private extension PopupScreenViewControllerImpl {
     @objc func closeButtonDidTouches() {
@@ -199,6 +201,7 @@ private extension PopupScreenViewControllerImpl {
         }) { [weak self] result in
             self?.popupView.isHidden = result
         }
+        interactor.storeValueInsideKeychain(with: self.selectedCode)
     }
     
     @objc func shuffelButtonDidTouches() {
@@ -252,23 +255,23 @@ private extension PopupScreenViewControllerImpl {
         buttonContainer.addArrangedSubview(closeButton)
         buttonContainer.addArrangedSubview(shuffelButton)
         let bottomConstraint = containerStackView.bottomAnchor.constraint(equalTo: buttonContainer.topAnchor,
-                                                                          constant: -baseUnit)
+                                                                          constant: -Theme.Dimensions.baseUnit)
         bottomConstraint.priority = UILayoutPriority(rawValue: 999)
         
         NSLayoutConstraint.activate([
             buttonContainer.bottomAnchor.constraint(equalTo: popupView.bottomAnchor,
-                                                    constant: -baseUnit),
+                                                    constant: -Theme.Dimensions.baseUnit),
             buttonContainer.leadingAnchor.constraint(equalTo: popupView.leadingAnchor,
-                                                     constant: baseUnit),
+                                                     constant: Theme.Dimensions.baseUnit),
             buttonContainer.trailingAnchor.constraint(equalTo: popupView.trailingAnchor,
-                                                      constant: -baseUnit),
+                                                      constant: -Theme.Dimensions.baseUnit),
             buttonContainer.heightAnchor.constraint(equalToConstant: 30.0),
             containerStackView.leadingAnchor.constraint(equalTo: popupView.leadingAnchor,
-                                                        constant: baseUnit),
+                                                        constant: Theme.Dimensions.baseUnit),
             containerStackView.trailingAnchor.constraint(equalTo: popupView.trailingAnchor,
-                                                         constant: -baseUnit),
+                                                         constant: -Theme.Dimensions.baseUnit),
             containerStackView.topAnchor.constraint(equalTo: popupView.topAnchor,
-                                                    constant: baseUnit),
+                                                    constant: Theme.Dimensions.baseUnit),
             bottomConstraint,
             
         ])
