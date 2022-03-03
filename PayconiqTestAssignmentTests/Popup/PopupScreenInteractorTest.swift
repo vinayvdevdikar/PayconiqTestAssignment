@@ -6,30 +6,73 @@
 //
 
 import XCTest
+@testable import PayconiqTestAssignment
 
 class PopupScreenInteractorTest: XCTestCase {
+    private var popupViewController: MockPopupScreenViewController!
+    private var interactor: PopupScreenInteractor!
+    private var presenter: PopupScreenPresenter!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        popupViewController = MockPopupScreenViewController()
+        presenter = PopupScreenPresenterImpl(viewController: popupViewController)
+        interactor = PopupScreenInteractorImpl(presenter: presenter)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        popupViewController = nil
+        interactor = nil
+        presenter = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func test_calculateMarginPercentage() {
+        interactor.calculateMarginPercentage(with: 320.0, percentage: 20, type: .width)
+        XCTAssertEqual(popupViewController.updatedMargin, 64.0)
+        popupViewController.resetFlags()
+        
+        interactor.calculateMarginPercentage(with: 480.0, percentage: 10, type: .height)
+        XCTAssertEqual(popupViewController.updatedMargin, 48.0)
+        popupViewController.resetFlags()
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_shuffelTheExistingCharater() {
+        interactor.shuffelTheExistingCharater(with: "dum-tex-ted")
+        XCTAssertNotEqual(popupViewController.updateShuffelCode, "")
+        popupViewController.resetFlags()
     }
+    
+    func test_storedValuesInKeychain() {
+        interactor.storeValueInsideKeychain(with: "dum-tex-ted")
+        XCTAssertTrue(popupViewController.updatedStatus)
+        popupViewController.resetFlags()
+    }
+}
 
+class MockPopupScreenViewController: PopupScreenViewController {
+    var updatedMargin: CGFloat = 0
+    var updateShuffelCode: String = ""
+    var updatedStatus: Bool = false
+    
+    func changeLeftRightConstraintConstant(with margin: CGFloat) {
+        updatedMargin = margin
+    }
+    
+    func changeTopBottomConstraintConstant(with margin: CGFloat) {
+        updatedMargin = margin
+    }
+    
+    func changeTheTextOfLabel(with reShuffelCode: String) {
+        updateShuffelCode = reShuffelCode
+    }
+    
+    func showSaveStatusOnScreen(with status: Bool) {
+        updatedStatus = status
+    }
+    
+    func resetFlags() {
+        updatedMargin = 0
+        updateShuffelCode = ""
+        updatedStatus = false
+    }
+    
 }

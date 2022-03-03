@@ -24,4 +24,23 @@ class MainScreenRouterTest: XCTestCase {
         router.resetflag()
     }
 
+    func test_navigateToPopup() {
+        let route = MainScreenMockRouter()
+        mainScreenViewController.router = route
+        mainScreenViewController.showPopupScreen()
+        //XCTAssertTrue(route.isMethodCalled)
+    }
+}
+
+fileprivate class MainScreenMockRouter: MainScreenRouterImpl {
+    var isMethodCalled: Bool = false
+    override func navigateToPopupScreen(viewController: UIViewController) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let vc = storyboard.instantiateInitialViewController() as? MainScreenViewControllerImpl {
+            vc.loadViewIfNeeded()
+            super.navigateToPopupScreen(viewController: vc)
+            isMethodCalled = true
+        }
+    }
+    
 }

@@ -30,12 +30,12 @@
 		3532B91127CFA4DA00755886 /* PopupScreenPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B91027CFA4DA00755886 /* PopupScreenPresenterTest.swift */; };
 		3532B91327CFA50400755886 /* PopupScreenViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B91227CFA50400755886 /* PopupScreenViewControllerTest.swift */; };
 		3532B91A27CFAD4400755886 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3532B91827CFAD4400755886 /* Localizable.strings */; };
+		3532B91D27CFB92C00755886 /* MainScreenUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532B91C27CFB92C00755886 /* MainScreenUITest.swift */; };
 		35F0C07427C9092F00D2D808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C07327C9092F00D2D808 /* AppDelegate.swift */; };
 		35F0C07627C9092F00D2D808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C07527C9092F00D2D808 /* SceneDelegate.swift */; };
 		35F0C07B27C9092F00D2D808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F0C07927C9092F00D2D808 /* Main.storyboard */; };
 		35F0C07D27C9093000D2D808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F0C07C27C9093000D2D808 /* Assets.xcassets */; };
 		35F0C08027C9093000D2D808 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F0C07E27C9093000D2D808 /* LaunchScreen.storyboard */; };
-		35F0C08B27C9093000D2D808 /* PayconiqTestAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C08A27C9093000D2D808 /* PayconiqTestAssignmentTests.swift */; };
 		35F0C09527C9093000D2D808 /* PayconiqTestAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C09427C9093000D2D808 /* PayconiqTestAssignmentUITests.swift */; };
 		35F0C09727C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C09627C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -84,6 +84,7 @@
 		3532B91527CFAA9400755886 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		3532B91927CFAD4400755886 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3532B91B27CFAD8200755886 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3532B91C27CFB92C00755886 /* MainScreenUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenUITest.swift; sourceTree = "<group>"; };
 		35F0C07027C9092F00D2D808 /* PayconiqTestAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PayconiqTestAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0C07327C9092F00D2D808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35F0C07527C9092F00D2D808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		35F0C07F27C9093000D2D808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35F0C08127C9093000D2D808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35F0C08627C9093000D2D808 /* PayconiqTestAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayconiqTestAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		35F0C08A27C9093000D2D808 /* PayconiqTestAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayconiqTestAssignmentTests.swift; sourceTree = "<group>"; };
 		35F0C09027C9093000D2D808 /* PayconiqTestAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayconiqTestAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0C09427C9093000D2D808 /* PayconiqTestAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayconiqTestAssignmentUITests.swift; sourceTree = "<group>"; };
 		35F0C09627C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayconiqTestAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -234,7 +234,6 @@
 			children = (
 				352A3E2327CA448D005CA3F4 /* Main */,
 				352A3E2227CA448D005CA3F4 /* Popup */,
-				35F0C08A27C9093000D2D808 /* PayconiqTestAssignmentTests.swift */,
 			);
 			path = PayconiqTestAssignmentTests;
 			sourceTree = "<group>";
@@ -244,6 +243,7 @@
 			children = (
 				35F0C09427C9093000D2D808 /* PayconiqTestAssignmentUITests.swift */,
 				35F0C09627C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift */,
+				3532B91C27CFB92C00755886 /* MainScreenUITest.swift */,
 			);
 			path = PayconiqTestAssignmentUITests;
 			sourceTree = "<group>";
@@ -404,7 +404,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F0C08B27C9093000D2D808 /* PayconiqTestAssignmentTests.swift in Sources */,
 				3532B91327CFA50400755886 /* PopupScreenViewControllerTest.swift in Sources */,
 				352A3E2927CA44DD005CA3F4 /* MainScreenPresenterTest.swift in Sources */,
 				3532B90F27CFA4CF00755886 /* PopupScreenRouterTest.swift in Sources */,
@@ -420,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3532B91D27CFB92C00755886 /* MainScreenUITest.swift in Sources */,
 				35F0C09527C9093000D2D808 /* PayconiqTestAssignmentUITests.swift in Sources */,
 				35F0C09727C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift in Sources */,
 			);

@@ -15,11 +15,13 @@ class MainScreenViewControllerTest: XCTestCase {
     private var interactor: MockInteractor!
     private let dummyTextField = UITextField(frame: .zero)
     private let dummyButton = UIButton(frame: .zero)
+    private var dummyPopupViewController: PopupScreenViewControllerImpl!
 
     override func setUpWithError() throws {
         router = MockRouter()
         interactor = MockInteractor()
         mainScreenViewController = MainScreenViewControllerImpl()
+        dummyPopupViewController = PopupScreenViewControllerImpl()
         mainScreenViewController.router = router
         mainScreenViewController.interactor = interactor
         mainScreenViewController.codeTextField = dummyTextField
@@ -42,14 +44,28 @@ class MainScreenViewControllerTest: XCTestCase {
     }
     
     func test_textFieldDidEndEditing() {
+        dummyTextField.text = nil
         mainScreenViewController.textFieldDidEndEditing(dummyTextField)
         XCTAssertTrue(interactor.isMethodCalled)
+        XCTAssertEqual(interactor.checkUnformattedText, "")
+        interactor.resetflag()
+        
+        
+        dummyTextField.text = "dummytext"
+        mainScreenViewController.textFieldDidEndEditing(dummyTextField)
+        XCTAssertEqual(interactor.checkUnformattedText, "dummytext")
         interactor.resetflag()
     }
     
     func test_textFieldShouldReturn() {
         XCTAssertTrue(mainScreenViewController.textFieldShouldReturn(dummyTextField))
         XCTAssertFalse(dummyTextField.isFirstResponder)
+    }
+    
+    func test_preparesegue() {
+        mainScreenViewController.codeTextField.text = "abc-efg"
+        mainScreenViewController.prepare(for: UIStoryboardSegue(identifier: "navigateToPopupView", source: mainScreenViewController, destination: dummyPopupViewController), sender: nil)
+        XCTAssertEqual(dummyPopupViewController.selectedCode, "abc-efg")
     }
 
 }
@@ -68,9 +84,11 @@ class MockRouter: MainScreenRouter {
 
 class MockInteractor: MainScreenInteractor {
     var isMethodCalled = false
+    var checkUnformattedText: String?
     
     func formatText(with unformatted: String) {
         isMethodCalled = true
+        checkUnformattedText = unformatted
     }
     
     func retrieveLastSaveKey() {
@@ -79,5 +97,6 @@ class MockInteractor: MainScreenInteractor {
     
     func resetflag() {
         isMethodCalled = false
+        checkUnformattedText = ""
     }
 }
