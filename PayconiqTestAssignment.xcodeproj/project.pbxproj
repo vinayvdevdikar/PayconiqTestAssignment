@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3503035627D2142E0003F053 /* PopupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3503035527D2142E0003F053 /* PopupScreen.swift */; };
 		35276F7D27CDF508006F2FFF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6BA27CBA70300A57261 /* MainScreenViewController.swift */; };
 		35276F7E27CDF50D006F2FFF /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B927CBA70300A57261 /* MainScreenRouter.swift */; };
 		35276F8127CDF518006F2FFF /* MainScreenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AE6B827CBA70300A57261 /* MainScreenInterface.swift */; };
@@ -36,7 +37,6 @@
 		35F0C07B27C9092F00D2D808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F0C07927C9092F00D2D808 /* Main.storyboard */; };
 		35F0C07D27C9093000D2D808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F0C07C27C9093000D2D808 /* Assets.xcassets */; };
 		35F0C08027C9093000D2D808 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F0C07E27C9093000D2D808 /* LaunchScreen.storyboard */; };
-		35F0C09527C9093000D2D808 /* PayconiqTestAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C09427C9093000D2D808 /* PayconiqTestAssignmentUITests.swift */; };
 		35F0C09727C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F0C09627C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3503035527D2142E0003F053 /* PopupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupScreen.swift; sourceTree = "<group>"; };
 		351AE6B527CBA70300A57261 /* MainScreenConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenConfigurator.swift; sourceTree = "<group>"; };
 		351AE6B627CBA70300A57261 /* MainScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
 		351AE6B727CBA70300A57261 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		35F0C08127C9093000D2D808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35F0C08627C9093000D2D808 /* PayconiqTestAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayconiqTestAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F0C09027C9093000D2D808 /* PayconiqTestAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PayconiqTestAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		35F0C09427C9093000D2D808 /* PayconiqTestAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayconiqTestAssignmentUITests.swift; sourceTree = "<group>"; };
 		35F0C09627C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayconiqTestAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,9 +241,9 @@
 		35F0C09327C9093000D2D808 /* PayconiqTestAssignmentUITests */ = {
 			isa = PBXGroup;
 			children = (
-				35F0C09427C9093000D2D808 /* PayconiqTestAssignmentUITests.swift */,
 				35F0C09627C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift */,
 				3532B91C27CFB92C00755886 /* MainScreenUITest.swift */,
+				3503035527D2142E0003F053 /* PopupScreen.swift */,
 			);
 			path = PayconiqTestAssignmentUITests;
 			sourceTree = "<group>";
@@ -258,6 +258,7 @@
 				35F0C06C27C9092F00D2D808 /* Sources */,
 				35F0C06D27C9092F00D2D808 /* Frameworks */,
 				35F0C06E27C9092F00D2D808 /* Resources */,
+				3503035727D2145F0003F053 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -376,6 +377,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3503035727D2145F0003F053 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35F0C06C27C9092F00D2D808 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -419,8 +440,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3503035627D2142E0003F053 /* PopupScreen.swift in Sources */,
 				3532B91D27CFB92C00755886 /* MainScreenUITest.swift in Sources */,
-				35F0C09527C9093000D2D808 /* PayconiqTestAssignmentUITests.swift in Sources */,
 				35F0C09727C9093000D2D808 /* PayconiqTestAssignmentUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
